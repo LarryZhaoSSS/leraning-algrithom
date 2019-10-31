@@ -45,7 +45,18 @@ public class Array {
         data[index] = e;
         size++;
     }
-
+    int get(int index) {
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("index > 0 && index<size: index illegal");
+        }
+        return data[index];
+    }
+    void set(int index, int e) {
+        if (index < 0 || index > size) {
+            throw new IllegalArgumentException("index > 0 && index<size: index illegal");
+        }
+        data[index] = e;
+    }
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
