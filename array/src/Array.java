@@ -92,6 +92,12 @@ public class Array {
     public int removeLast() {
         return remove(size-1);
     }
+    public void removeElement(int e) {
+        int index = find(e);
+        if(index != -1) {
+            remove(index);
+        }
+    }
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
