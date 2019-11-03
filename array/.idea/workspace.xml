@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2892d55-1193-49dd-ac2b-7cd1ae403e98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Array.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Array.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/src/Array.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="439">
-              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
               <folding>
                 <element signature="e#233#234#0" expanded="true" />
                 <element signature="e#257#258#0" expanded="true" />
@@ -44,6 +43,10 @@
                 <element signature="e#519#520#0" expanded="true" />
                 <element signature="e#553#554#0" expanded="true" />
                 <element signature="e#577#578#0" expanded="true" />
+                <element signature="e#2122#2123#0" expanded="true" />
+                <element signature="e#2152#2153#0" expanded="true" />
+                <element signature="e#2184#2185#0" expanded="true" />
+                <element signature="e#2220#2221#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,8 +73,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="50" />
-    <option name="y" value="97" />
+    <option name="x" value="454" />
+    <option name="y" value="309" />
     <option name="width" value="1260" />
     <option name="height" value="680" />
   </component>
@@ -82,6 +85,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,7 +103,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -149,7 +152,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="50" y="97" width="1260" height="680" extended-state="0" />
+    <frame x="495" y="62" width="1260" height="680" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -177,7 +180,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="8" visible="true" weight="0.24917218" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="8" visible="true" weight="0.25413907" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -191,7 +194,7 @@
     <entry file="file://$PROJECT_DIR$/src/Array.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
-          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
           <folding>
             <element signature="e#233#234#0" expanded="true" />
             <element signature="e#257#258#0" expanded="true" />
@@ -205,6 +208,10 @@
             <element signature="e#519#520#0" expanded="true" />
             <element signature="e#553#554#0" expanded="true" />
             <element signature="e#577#578#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2152#2153#0" expanded="true" />
+            <element signature="e#2184#2185#0" expanded="true" />
+            <element signature="e#2220#2221#0" expanded="true" />
           </folding>
         </state>
       </provider>

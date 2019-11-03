@@ -57,6 +57,41 @@ public class Array {
         }
         data[index] = e;
     }
+    // 查找数组中是否有e
+    public boolean contains(int e) {
+        for(int i=0;i<size;i++) {
+            if(data[i]==e) {
+                return true;
+            }
+        }
+        return false;
+    }
+    // 查找e的索引，没有返回-1
+    public int find(int e) {
+        for(int i=0;i<size;i++) {
+            if(data[i]==e) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public int remove(int index) {
+        if(index<0 || index >= size) {
+            throw new IllegalArgumentException("remove failed");
+        }
+        int ret = data[index];
+        for(int i = index+1;i<size;i++) {
+            data[i-1] = data[i];
+        }
+        size--;
+        return ret;
+    }
+    public int removeFirst() {
+        return remove(0);
+    }
+    public int removeLast() {
+        return remove(size-1);
+    }
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
