@@ -1,10 +1,10 @@
-public class Array {
-    private int[] data;
+public class Array<E> {
+    private E[] data;
     private int size;
 
     // 传入数组的容量capacity构造Array
     public Array(int capacity) {
-        data = new int[capacity];
+        data =(E []) new Object[capacity];
         size = 0;
     }
 
@@ -26,13 +26,13 @@ public class Array {
         return size == 0;
     }
 
-    public void addLast(int e) {
+    public void addLast(E e) {
         add(size,e);
     }
-    public void addFirst(int e) {
+    public void addFirst(E e) {
         add(0,e);
     }
-    public void add(int index, int e) {
+    public void add(int index, E e) {
         if (size == data.length) {
             throw new IllegalArgumentException("Array is full");
         }
@@ -45,54 +45,55 @@ public class Array {
         data[index] = e;
         size++;
     }
-    int get(int index) {
+    public E get(int index) {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("index > 0 && index<size: index illegal");
         }
         return data[index];
     }
-    void set(int index, int e) {
+    public void set(int index, E e) {
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("index > 0 && index<size: index illegal");
         }
         data[index] = e;
     }
     // 查找数组中是否有e
-    public boolean contains(int e) {
+    public boolean contains(E e) {
         for(int i=0;i<size;i++) {
-            if(data[i]==e) {
+            if(data[i].equals(e)) {
                 return true;
             }
         }
         return false;
     }
     // 查找e的索引，没有返回-1
-    public int find(int e) {
+    public int find(E e) {
         for(int i=0;i<size;i++) {
-            if(data[i]==e) {
+            if(data[i].equals(e)) {
                 return i;
             }
         }
         return -1;
     }
-    public int remove(int index) {
+    public E remove(int index) {
         if(index<0 || index >= size) {
             throw new IllegalArgumentException("remove failed");
         }
-        int ret = data[index];
+        E ret = data[index];
         for(int i = index+1;i<size;i++) {
             data[i-1] = data[i];
         }
         size--;
+        data[size] = null;  // 用于gc
         return ret;
     }
-    public int removeFirst() {
+    public E removeFirst() {
         return remove(0);
     }
-    public int removeLast() {
+    public E removeLast() {
         return remove(size-1);
     }
-    public void removeElement(int e) {
+    public void removeElement(E e) {
         int index = find(e);
         if(index != -1) {
             remove(index);
