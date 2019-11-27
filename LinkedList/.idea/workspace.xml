@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6401eb04-8c8e-4467-a76a-9f4fa6ad42ff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
@@ -21,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="281">
+              <caret line="26" column="25" selection-start-line="25" selection-start-column="4" selection-end-line="27" selection-end-column="39" />
               <folding>
                 <element signature="e#170#179#0" expanded="true" />
               </folding>
@@ -33,18 +32,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1728">
-              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+            <state relative-caret-position="139">
+              <caret line="137" column="28" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
               <folding>
+                <element signature="e#230#231#0" expanded="true" />
                 <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#292#293#0" expanded="true" />
                 <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
                 <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
                 <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
                 <element signature="e#722#723#0" expanded="true" />
+                <element signature="e#1162#1163#0" expanded="true" />
                 <element signature="e#1187#1188#0" expanded="true" />
+                <element signature="e#1239#1240#0" expanded="true" />
                 <element signature="e#1267#1268#0" expanded="true" />
+                <element signature="e#1655#1656#0" expanded="true" />
                 <element signature="e#1684#1685#0" expanded="true" />
+                <element signature="e#1729#1730#0" expanded="true" />
                 <element signature="e#1765#1766#0" expanded="true" />
+                <element signature="e#2793#2794#0" expanded="true" />
+                <element signature="e#2823#2824#0" expanded="true" />
+                <element signature="e#2853#2854#0" expanded="true" />
+                <element signature="e#2883#2884#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +83,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="340" />
-    <option name="y" value="62" />
+    <option name="x" value="69" />
+    <option name="y" value="25" />
     <option name="width" value="1260" />
     <option name="height" value="720" />
   </component>
@@ -82,7 +94,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,6 +110,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -164,8 +176,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="340" y="62" width="1260" height="720" extended-state="0" />
-    <editor active="true" />
+    <frame x="69" y="25" width="1260" height="720" extended-state="0" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
@@ -173,7 +184,6 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32840723" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32840723" />
@@ -184,6 +194,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.30706075" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32864675" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32840723" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Maven" order="2" />
@@ -192,7 +203,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="8" visible="true" weight="0.26490065" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="8" visible="true" weight="0.26986754" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -202,26 +213,39 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1728">
-          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+        <state relative-caret-position="139">
+          <caret line="137" column="28" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
           <folding>
+            <element signature="e#230#231#0" expanded="true" />
             <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
             <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
             <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
             <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
             <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
             <element signature="e#1187#1188#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
             <element signature="e#1267#1268#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
             <element signature="e#1684#1685#0" expanded="true" />
+            <element signature="e#1729#1730#0" expanded="true" />
             <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#2793#2794#0" expanded="true" />
+            <element signature="e#2823#2824#0" expanded="true" />
+            <element signature="e#2853#2854#0" expanded="true" />
+            <element signature="e#2883#2884#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state relative-caret-position="281">
+          <caret line="26" column="25" selection-start-line="25" selection-start-column="4" selection-end-line="27" selection-end-column="39" />
           <folding>
             <element signature="e#170#179#0" expanded="true" />
           </folding>
