@@ -5,33 +5,29 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-//	    ArrayQueue<Integer> queue = new ArrayQueue<Integer>();
+//	    LinkedListQueue<Integer> queue = new LinkedListQueue<Integer>();
 //	    for(int i = 0;i<10;i++) {
 //	        queue.enqueue(i);
 //	        System.out.println(queue);
-//        }
-//	    int queueSize = queue.getSize();
-//		for(int j=0;j<queueSize-1;j++) {
-//			if(j %2 ==0) {
-//				queue.dequeue();
+//	        if( i %3 ==2){
+//	        	queue.dequeue();
+//	        	System.out.println("----dequeue----");
+//	        	System.out.println(queue);
 //			}
-//		}
+//        }
+//
 //		System.out.println(queue);
-//		LoopQueue<Integer> queue = new LoopQueue<Integer>();
-//	    for(int i = 0;i<10;i++) {
-//	        queue.enqueue(i);
-//			if(i %3 ==2) {
-//				queue.dequeue();
-//			}
-//	        System.out.println(queue);
-//        }
-		int opCount = 100000;
+
+		int optCount = 1000000;
 		ArrayQueue<Integer> arrayQueue = new ArrayQueue<Integer>();
-		double time1 = testQueue(arrayQueue,opCount);
-		System.out.println("ArrayQue time:" + time1 +"秒");
+		double time1 = testQueue(arrayQueue,optCount);
+		System.out.println("ArrayQueue,time:" + time1 +"秒");
 		LoopQueue<Integer> loopQueue = new LoopQueue<Integer>();
-		double time2 = testQueue(loopQueue,opCount);
-		System.out.println("LoopQue time:" + time2 +"秒");
+		double time2 = testQueue(loopQueue,optCount);
+		System.out.println("LoopQueue,time:" + time2 +"秒");
+		LinkedListQueue<Integer> linkQueue = new LinkedListQueue<Integer>();
+		double time3 = testQueue(linkQueue,optCount);
+		System.out.println("LinkedListQueue,time:" + time3 +"秒");
 
     }
     public static double testQueue(Queue<Integer> q, int opCount) {
