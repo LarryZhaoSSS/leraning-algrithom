@@ -1,5 +1,9 @@
 package com.company;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 public class BST<E extends Comparable<E>> {
     private class Node {
         public E e;
@@ -79,6 +83,61 @@ public class BST<E extends Comparable<E>> {
         System.out.println(node.e);
         preOrder(node.left);
         preOrder(node.right);
+    }
+
+    public void preOrderNR() {
+        Stack<Node> stack = new Stack();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            Node cur = stack.pop();
+            System.out.println(cur.e);
+            if (cur.right != null) {
+                stack.push(cur.right);
+            }
+            if (cur.left != null) {
+                stack.push(cur.left);
+            }
+        }
+    }
+
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    private void inOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        inOrder(node.left);
+        System.out.println(node.e);
+        inOrder(node.right);
+    }
+
+    public void postOrder() {
+        postOrder(root);
+    }
+
+    private void postOrder(Node node) {
+        if (node == null) {
+            return;
+        }
+        postOrder(node.left);
+        postOrder(node.right);
+        System.out.println(node.e);
+    }
+    public void levelOrder() {
+        Queue<Node> q = new LinkedList<Node>();
+        q.add(root);
+        while(!q.isEmpty()) {
+            Node cur = q.remove();
+            System.out.println(cur.e);
+            if(cur.left != null) {
+                q.add(cur.left);
+            }
+            if(cur.right != null) {
+                q.add(cur.right);
+            }
+        }
     }
 
     @Override
