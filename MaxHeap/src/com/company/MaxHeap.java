@@ -10,7 +10,12 @@ public class MaxHeap<E extends Comparable<E>> {
     public MaxHeap() {
         data = new Array<E>();
     }
-
+    public MaxHeap(E [] arr) {
+        data = new Array<E>(arr);
+        for(int i = parent(arr.length);i>=0;i--) {
+            siftDown(i);
+        }
+    }
     public int size() {
         return data.getSize();
     }
@@ -80,5 +85,12 @@ public class MaxHeap<E extends Comparable<E>> {
             data.swap(k,j);
             k = j;
         }
+    }
+    // 取出堆中的最大元素，并且替换为e
+    public E replace(E e) {
+        E ret = findMax();
+        data.set(0,e); //堆顶元素替换为e
+        siftDown(0);
+        return ret;
     }
 }
