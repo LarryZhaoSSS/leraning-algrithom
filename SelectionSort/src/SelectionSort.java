@@ -17,10 +17,9 @@ public class SelectionSort {
         arr[j] =t;
     }
     public static void main(String[] args) {
-        Integer [] arr = {11,33,1,2,4,5,9,4,5,6};
-        SelectionSort.sort(arr);
-        for(int e:arr) {
-            System.out.print(e+" ");
-        }
+        int n = 20000;
+        Integer [] arr = ArrayGenerator.generateRandomArray(n,n);
+        SortintHelper.sortTest("SelectionSort",arr);
+
     }
 }
