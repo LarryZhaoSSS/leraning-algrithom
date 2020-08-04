@@ -19,7 +19,7 @@ public class SelectionSort {
     public static void main(String[] args) {
         int n = 20000;
         Integer [] arr = ArrayGenerator.generateRandomArray(n,n);
-        SortintHelper.sortTest("SelectionSort",arr);
+        SortingHelper.sortTest("InSertionSort",arr);
 
     }
 }
