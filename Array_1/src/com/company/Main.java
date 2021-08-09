@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Array arr = new Array(20);
+        Array<Integer> arr = new Array<>(5);
         for (int i = 0; i < 10; i++) {
             arr.addLast(i);
         }
