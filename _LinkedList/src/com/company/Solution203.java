@@ -45,4 +45,16 @@ public class Solution203 {
         }
         return dummyHead.next;
     }
+    public ListNode removeElementsByRecur(ListNode head,int val) {
+        if(head == null) {
+            return null;
+        }
+        ListNode res = removeElements(head.next,val);
+        if(head.val == val) {
+             return res;
+        } else {
+            head.next = res;
+            return head;
+        }
+    }
 }
