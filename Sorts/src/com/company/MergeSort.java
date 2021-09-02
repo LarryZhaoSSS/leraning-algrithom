@@ -8,13 +8,46 @@ public class MergeSort {
         sort(arr,0, arr.length-1);
     }
     private static <E extends  Comparable<E>> void sort(E[] arr,int l,int r) {
-        if(l >= r) {
+        if(r-l<=15) {
+            InsertionSort.sort(arr,l,r);
             return;
         }
         int mid = (l+r) / 2;
         sort(arr,l,mid);
         sort(arr,mid+1,r);
         merge(arr,l,mid,r);
+
+    }
+    public static <E extends  Comparable<E>>void sort2(E[] arr) {
+        sort2(arr,0, arr.length-1);
+    }
+    private static <E extends  Comparable<E>> void sort2(E[] arr,int l,int r) {
+        if(l >= r) {
+            return;
+        }
+        int mid = (l+r) / 2;
+        sort2(arr,l,mid);
+        sort2(arr,mid+1,r);
+        if(arr[mid].compareTo(arr[mid+1])>0) {
+            merge(arr,l,mid,r);
+        }
+
+
+    }
+    public static <E extends  Comparable<E>>void sort3(E[] arr) {
+        sort3(arr,0, arr.length-1);
+    }
+    private static <E extends  Comparable<E>> void sort3(E[] arr,int l,int r) {
+        if(l >= r) {
+            return;
+        }
+        int mid = (l+r) / 2;
+        sort3(arr,l,mid);
+        sort3(arr,mid+1,r);
+        if(arr[mid].compareTo(arr[mid+1])>0) {
+            merge(arr,l,mid,r);
+        }
+
 
     }
     private static <E extends Comparable<E>> void merge(E[] arr,int l,int mid,int r) {
@@ -38,7 +71,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int n = 100000;
+        int n = 1000000;
        Integer[] arr = ArrayGenerator.generateRandomArray(n,n);
        SortingHelper.sortTest("MergeSort",arr);
     }
