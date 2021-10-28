@@ -134,7 +134,30 @@ public class BinarySearchTree<E extends Comparable<E>> {
             }
         }
     }
-
+    public E minimum(){
+        if(size==0){
+            throw new IllegalArgumentException("bst is empty");
+        }
+        return minimum(root).e;
+    }
+    private Node minimum(Node node){
+        if(node.left == null){
+            return node;
+        }
+        return minimum(node.left);
+    }
+    public E maximum(){
+        if(size==0){
+            throw new IllegalArgumentException("bst is empty");
+        }
+        return maximum(root).e;
+    }
+    private Node maximum(Node node){
+        if(node.right == null){
+            return node;
+        }
+        return minimum(node.right);
+    }
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
@@ -180,5 +203,9 @@ public class BinarySearchTree<E extends Comparable<E>> {
         System.out.println();
 
         bst.levelOrder();
+        System.out.println("minimum:");
+        System.out.println(bst.minimum());
+        System.out.println("maximum:");
+        System.out.println(bst.maximum());
     }
 }
