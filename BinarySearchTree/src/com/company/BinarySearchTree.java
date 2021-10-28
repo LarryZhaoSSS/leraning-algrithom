@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class BinarySearchTree<E extends Comparable<E>> {
@@ -31,7 +33,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     public void add(E e) {
-        root = add(root,e);
+        root = add(root, e);
     }
 
     private Node add(Node node, E e) {
@@ -46,86 +48,113 @@ public class BinarySearchTree<E extends Comparable<E>> {
         }
         return node;
     }
+
     public boolean contains(E e) {
-        return contains(root,e);
+        return contains(root, e);
     }
-    private boolean contains(Node node,E e) {
-        if(node == null) {
+
+    private boolean contains(Node node, E e) {
+        if (node == null) {
             return false;
         }
-        if(e.compareTo(node.e) == 0) {
+        if (e.compareTo(node.e) == 0) {
             return true;
-        } else if(e.compareTo(node.e)<0) {
-            return contains(node.left,e);
+        } else if (e.compareTo(node.e) < 0) {
+            return contains(node.left, e);
         } else {
-            return contains(node.right,e);
+            return contains(node.right, e);
         }
     }
+
     public void preOrder() {
         preOrder(root);
     }
+
     private void preOrder(Node node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
         System.out.println(node.e);
         preOrder(node.left);
         preOrder(node.right);
     }
+
     public void inOrder() {
         inOrder(root);
     }
+
     private void inOrder(Node node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
         inOrder(node.left);
         System.out.println(node.e);
         inOrder(node.right);
     }
+
     public void postOrder() {
         postOrder(root);
     }
+
     private void postOrder(Node node) {
-        if(node == null) {
+        if (node == null) {
             return;
         }
         postOrder(node.left);
         postOrder(node.right);
         System.out.println(node.e);
     }
-    public void preOrderNR(){
+
+    public void levelOrder() {
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            Node cur = q.remove();
+            System.out.println(cur.e);
+            if (cur.left != null) {
+                q.add(cur.left);
+            }
+            if (cur.right != null) {
+                q.add(cur.right);
+            }
+        }
+    }
+
+    public void preOrderNR() {
         Stack<Node> stack = new Stack<>();
         stack.push(root);
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             Node cur = stack.pop();
             System.out.println(cur.e);
-            if(cur.right!=null) {
+            if (cur.right != null) {
                 stack.push(cur.right);
             }
-            if(cur.left!=null) {
+            if (cur.left != null) {
                 stack.push(cur.left);
             }
         }
     }
+
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
-        generateBSTString(root,0,res);
+        generateBSTString(root, 0, res);
         return res.toString();
     }
-    private void generateBSTString(Node node,int depth,StringBuilder res) {
-        if(node == null) {
-            res.append(generateDepthString(depth)+"null\n");
+
+    private void generateBSTString(Node node, int depth, StringBuilder res) {
+        if (node == null) {
+            res.append(generateDepthString(depth) + "null\n");
             return;
         }
-        res.append(generateDepthString(depth) + node.e+"\n");
-        generateBSTString(node.left,depth+1,res);
-        generateBSTString(node.right,depth+1,res);
+        res.append(generateDepthString(depth) + node.e + "\n");
+        generateBSTString(node.left, depth + 1, res);
+        generateBSTString(node.right, depth + 1, res);
     }
+
     private String generateDepthString(int depth) {
         StringBuilder res = new StringBuilder();
-        for(int i=0;i<depth;i++) {
+        for (int i = 0; i < depth; i++) {
             res.append("--");
         }
         return res.toString();
@@ -134,7 +163,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
     public static void main(String[] args) {
         BinarySearchTree<Integer> bst = new BinarySearchTree<>();
         int[] nums = {5, 3, 6, 8, 4, 2};
-        for(int num: nums)
+        for (int num : nums)
             bst.add(num);
 
         /////////////////
@@ -149,5 +178,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
         bst.preOrderNR();
         System.out.println();
+
+        bst.levelOrder();
     }
 }
